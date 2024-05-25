@@ -8,7 +8,9 @@
 }
 .btn-options{
     border-color: #423434;
+    color: #423434;
 }
 .btn-options:hover{
     background-color: #423434;
+    color: #ffff;
 }
