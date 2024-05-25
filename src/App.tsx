@@ -1,9 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle';
-import QuizScreen from './components/QuizScreen';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle";
+import QuizScreen from "./components/QuizScreen";
 
 function App() {
   var questions = [
@@ -52,12 +52,16 @@ function App() {
       ],
       correctAns: "Read Only Memory",
     },
-  ]
+  ];
 
   return (
     <div className="App">
       <header className="App-header">
-     <QuizScreen quizArray={questions}/>
+        <div className="container-fluid main-container g-0">
+          <div className="container border ">
+          <QuizScreen quizArray={questions} />
+          </div>
+        </div>
       </header>
     </div>
   );

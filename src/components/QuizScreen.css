@@ -1,0 +1,14 @@
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+}
+.btn-options{
+    border-color: #423434;
+}
+.btn-options:hover{
+    background-color: #423434;
+}

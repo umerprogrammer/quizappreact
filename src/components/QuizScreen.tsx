@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
+import "../components/QuizScreen.css"
 import { useState } from "react";
 
 export default function QuizScreen(props:{
@@ -14,12 +15,12 @@ export default function QuizScreen(props:{
     const {quizArray} = props;
     const [currentIndex,setCurrentIndex] = useState(0);
   return (
-    <div className="conatiner-fluid g-0 rounded-4 shadow border border-light w-75 p-5">
+    <div className="conatiner-fluid g-0 rounded-4 shadow border border-light w-100 p-5">
       <div className="container w-100">
         <div className="row mb-3 d-flex justify-content-between">
-            <div className="col-md-12">  
+            <div className="col-md-12 text-start w-100 d-flex gap-3">  
         <label htmlFor="Quest" className="text-start ">Question :</label>
-        <label htmlFor="">{currentIndex+1}/{quizArray.length}</label>
+        <label htmlFor=""><sup>{currentIndex+1}</sup>/{quizArray.length} </label>
         </div>
         </div>
         <div className="row mb-3">
@@ -34,8 +35,8 @@ export default function QuizScreen(props:{
         {
         
             quizArray[currentIndex].options.map((x:any,i:any)=>(
-                <div className="col-md-6">
-                 <button type="button" name="option1" className="btn border-light rounded-pill text-white px-5 w-100">{x}</button>
+                <div className="col-md-6 mb-3">
+                 <button type="button" name="option1" className="btn border-light rounded-pill text-white px-5 w-100 btn-options">{x}</button>
                 </div>
                 
             ))}
